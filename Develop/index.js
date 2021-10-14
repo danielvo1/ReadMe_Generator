@@ -9,48 +9,54 @@ const questions = [
     {
         type: "input",
         message: "What is your project name?",
-        name: "Title"
+        name: "title"
     }, 
-    // {
-    //     type: "input",
-    //     message: "What is the project description?",
-    //     name: "Description"
-    // },
-    // {
-    //     type: "input",
-    //     message: "What is the installation instructions?",
-    //     name: "Installation"
-    // },
-    // {
-    //     type: "input",
-    //     message: "What is the contribution guidelines?",
-    //     name: "Contributing"
-    // },
-    // {
-    //     type: "input",
-    //     message: "What is the test instructions?",
-    //     name: "Tests"
-    // },
-    // {
-    //     type: "input",
-    //     message: "What is your Github username?",
-    //     name: "github"
-    // },
-    // {
-    //     type: "input",
-    //     message: "What is the your email?",
-    //     name: "email"
-    // },
-    // {
-    //     type: "list",
-    //     name: "license",
-    //     message: "Chose the appropriate license for this project: ",
-    //     choices: [
-    //         "GPL",
-    //         "MIT",
-    //         "BSD",   
-    //     ]
-    //     }
+    {
+        type: "input",
+        message: "What is the project description?",
+        name: "description"
+    },
+    {
+        type: "input",
+        message: "What are the steps required to install your project? ",
+        name: "installation"
+    },
+    {
+        type: "input",
+        message: "Explain and provide examples for use",
+        name: "usage"
+    },
+    {
+        type: "input",
+        message: "Who contributed to this project?",
+        name: "contributing"
+    },
+    {
+        type: "input",
+        message: "What is the test instructions?",
+        name: "tests"
+    },
+    {
+        type: "input",
+        message: "What is your Github username?",
+        name: "github"
+    },
+    {
+        type: "input",
+        message: "What is the your email?",
+        name: "email"
+    },
+    {
+        type: "list",
+        name: "license",
+        message: "Chose the appropriate license for this project: ",
+        choices: [
+            "Apache",
+            "GNU",
+            "MIT",
+            "ISC",   
+        ]
+        }
 ];
 
 // TODO: Create a function to write README file
@@ -62,7 +68,7 @@ function init() {
     inquirer.prompt(questions)
     .then(results => {
         console.log(results);
-        writeToFile("ReadMe.md", results);
+        writeToFile("readMe.md", results);
     })
 }
 
